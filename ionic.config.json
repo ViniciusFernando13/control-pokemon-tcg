@@ -1,0 +1,7 @@
+{
+  "name": "control-pokemon-tcg",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
