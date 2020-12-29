@@ -1,0 +1,39 @@
+#player {
+    &One {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #a1a1a1;
+        transform: rotate(180deg);
+    }
+
+    &Two {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: #f1f1f1;
+    }
+}
+
+.board {
+    padding: 16px;
+    height: 50vh;
+    width: 100%;
+}
+
+.active-place {
+    padding: 16px 0px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;    
+}
+
+.bench {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+}

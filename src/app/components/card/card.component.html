@@ -1,0 +1,16 @@
+<div class="card" [class.active]="active">
+    <div class="btn plus" (click)="controlDamage(10)">
+        <ion-icon name="add-outline"></ion-icon>
+    </div>
+    <div class="damage-counter">
+        {{damage}}
+    </div>
+    <div class="btn minus" (click)="controlDamage(-10)">
+        <ion-icon name="remove-outline"></ion-icon>
+    </div>
+    <img class="paralyzed" *ngIf="conditions?.paralyze" src="assets/gifs/paralyze.gif" alt="">
+    <img class="confused" *ngIf="conditions?.confuse" src="assets/gifs/confuse.gif" alt="">
+    <img class="sleeping" *ngIf="conditions?.sleep" src="assets/gifs/sleep.gif" alt="">
+    <img class="poisoned" *ngIf="conditions?.poison" src="assets/gifs/poison.gif" alt="">
+    <img class="burned" *ngIf="conditions?.burn" src="assets/gifs/fire.gif" alt="">
+</div>

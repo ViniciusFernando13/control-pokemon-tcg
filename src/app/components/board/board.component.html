@@ -1,0 +1,21 @@
+<div [id]="player" class="board">
+    <div class="active-place">
+        <app-card [active]="true" [conditions]="conditions"></app-card>
+
+        <div class="coins-place">
+            <div class="principals">
+                <poison-coin [active]="conditions.poison" (click)="toggleCondition('poison')"></poison-coin>
+                <burn-coin [active]="conditions.burn" (click)="toggleCondition('burn')"></burn-coin>
+            </div>
+            <div class="others">
+                <sleep-coin [active]="conditions.sleep" (click)="toggleCondition('sleep')"></sleep-coin>
+                <confuse-coin [active]="conditions.confuse" (click)="toggleCondition('confuse')"></confuse-coin>
+                <paralize-coin [active]="conditions.paralyze" (click)="toggleCondition('paralyze')"></paralize-coin>
+            </div>
+        </div>
+    </div>
+
+    <div class="bench">
+        <app-card *ngFor="let card of bench"></app-card>
+    </div>
+</div>
