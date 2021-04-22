@@ -1,5 +1,8 @@
 <div [id]="player" class="board">
     <div class="active-place">
+
+        <coin [active]="coin" (click)="toggleCoin()"></coin>
+
         <app-card [active]="true" [conditions]="conditions"></app-card>
 
         <div class="coins-place">

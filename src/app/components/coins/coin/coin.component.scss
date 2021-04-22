@@ -1,0 +1,41 @@
+.coin {
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    padding: 3.5px;
+    border-radius: 150px;
+    font-size: 36px;
+    border: #fff solid 2px;
+    margin: 8px 0px;
+    z-index: 2;
+    -webkit-backface-visibility: hidden;
+    color: rgb(128,128,128);
+    background: rgb(211,211,211);
+
+    &.front {
+        color: rgb(205,133,63);
+        background: rgb(255,215,0);
+        z-index: 1;
+        border: #000 solid 2px;
+    }
+
+    &.back {
+        -webkit-transform: rotatex(180deg);
+        margin-top: -7px;
+    }
+}
+
+.coin-container {
+    width: 50px;
+    height: 50px;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 1s;
+
+    &.active {
+        -webkit-transform-origin: 50% 50%;
+        -webkit-transform: rotatex(-1980deg);
+        transition: all 1s ease 0s;
+    }
+}

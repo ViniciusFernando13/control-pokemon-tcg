@@ -5,12 +5,14 @@ import { BurnComponent } from './burn/burn.component';
 import { SleepComponent } from './sleep/sleep.component';
 import { ParalizeComponent } from './paralize/paralize.component';
 import { ConfuseComponent } from './confuse/confuse.component';
+import { CoinComponent } from './coin/coin.component';
 
 const components = [
     PoisonComponent,
     BurnComponent,
     SleepComponent,
     ParalizeComponent,
+    CoinComponent,
     ConfuseComponent
 ];
 
