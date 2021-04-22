@@ -1,12 +1,18 @@
 <div class="card" [class.active]="active">
-    <div class="btn plus" (click)="controlDamage(10)">
+    <div *ngIf="actions" class="btn plus" (click)="controlDamage(10)">
         <ion-icon name="add-outline"></ion-icon>
     </div>
-    <div class="damage-counter">
+    <div *ngIf="!actions" class="btn trash" (click)="delete()">
+        <ion-icon name="trash-outline"></ion-icon>
+    </div>
+    <div class="damage-counter" (click)="toggleActions()">
         {{damage}}
     </div>
-    <div class="btn minus" (click)="controlDamage(-10)">
+    <div *ngIf="actions" class="btn minus" (click)="controlDamage(-10)">
         <ion-icon name="remove-outline"></ion-icon>
+    </div>
+    <div *ngIf="!actions" class="btn change" (click)="controlDamage(-10)">
+        <ion-icon name="git-compare-outline"></ion-icon>
     </div>
     <img class="paralyzed" *ngIf="conditions?.paralyze" src="assets/gifs/paralyze.gif" alt="">
     <img class="confused" *ngIf="conditions?.confuse" src="assets/gifs/confuse.gif" alt="">

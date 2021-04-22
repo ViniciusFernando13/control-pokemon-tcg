@@ -3,7 +3,7 @@
 
         <coin [active]="coin" (click)="toggleCoin()"></coin>
 
-        <app-card [active]="true" [conditions]="conditions"></app-card>
+        <poke-card [active]="true" [conditions]="conditions"></poke-card>
 
         <div class="coins-place">
             <div class="principals">
@@ -19,6 +19,7 @@
     </div>
 
     <div class="bench">
-        <app-card *ngFor="let card of bench"></app-card>
+        <poke-card *ngFor="let card of bench; index as i" [index]="i" (deleteEvent)="deleteCard($event)"></poke-card>
+        <add-card *ngIf="bench.length < 5" (click)="addPokeToBench()"></add-card>
     </div>
 </div>

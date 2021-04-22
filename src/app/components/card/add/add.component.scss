@@ -1,0 +1,35 @@
+.card {
+    display: inline-block;
+    position: relative;
+    background: #008ff2;
+    z-index: 1;
+    margin: 8px;
+    height: calc((20vw - 24px) * 1.3968);
+    width: calc(20vw - 24px);
+    border-radius: 5px;
+
+    .damage-counter {
+        position: absolute;
+        top: 25%;
+        background: #fff;
+        border-radius: 150px;
+        font-size: 26px;
+        line-height: calc(20vw - 28px);
+        height: calc((20vw - 24px) * 0.75);
+        width: calc((20vw - 24px) * 0.75);
+        left: calc((20vw - 24px) / 8);
+    }
+
+    &::after {
+        content: "";
+        border-radius: 7.5px;
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        bottom: -2px;
+        right: -2px;
+        border: 2px #275277 solid;
+    }
+
+}
+

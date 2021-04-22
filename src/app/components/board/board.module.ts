@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BoardComponent } from './board.component';
-import { CardModule } from '../card/card.module';
+import { CardsModule } from '../card/cards.module';
 import { CoinsModule } from '../coins/coins.module';
 
 const components = [
@@ -11,7 +11,7 @@ const components = [
 @NgModule({
   declarations: components,
   imports: [
-    CardModule,
+    CardsModule,
     CoinsModule,
     CommonModule
   ],

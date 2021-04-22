@@ -31,11 +31,11 @@
     width: 50px;
     height: 50px;
     -webkit-transform-style: preserve-3d;
-    -webkit-transition: 1s;
+    -webkit-transition: 2s;
 
     &.active {
         -webkit-transform-origin: 50% 50%;
         -webkit-transform: rotatex(-1980deg);
-        transition: all 1s ease 0s;
+        transition: all 2s ease 0s;
     }
 }
